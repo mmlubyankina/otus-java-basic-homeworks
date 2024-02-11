@@ -1,15 +1,15 @@
 package ru.otus.java.basic.homeworks.lesson10;
 
 public class Box {
-    private final int length;      // длина
-    private final int width;       // ширина
-    private final int height;      // высота
+    private final int length;
+    private final int width;
+    private final int height;
     private String item;
     private String color;
-    private boolean open = false;           // открыта
+    private boolean open = false;
     private String deleteItem = null;
 
-/** геттеры и сеттеры: */
+
     public String getColor(){
         return color;
     }
@@ -29,15 +29,11 @@ public class Box {
         return false;
     }
 
-
-
-    /**сеттеры */
     public void setColor(String color){         // смена цвета
         this.color = color;
         System.out.println("Перекрасили коробку в новый цвет: " + color);
         System.out.println();
     }
-
 
     public boolean setOpen(){
         if (!isOpen()){
@@ -59,13 +55,7 @@ public class Box {
         return true;
     }
 
-
-
-    /** Если в конструкторе не задавать item, то тогда код будет таким:
-     * чтобы this.item = _item; , потому что иначе переменная "item" не будет инициализироваться, и условие не будет работать !!!!
-     * */
-
-    public String setItem(String newItem){            // положить предмет в коробку
+    public String setItem(String newItem){
         if (this.isOpen()){
             if (item == null || item.isEmpty()) {
                 this.item = newItem;
@@ -83,9 +73,7 @@ public class Box {
         return null;
     }
 
-
-
-    public String removeItem(){            // убрать предмет
+    public String removeItem(){
         if (this.isOpen()){
             if (item == null || item.isEmpty()) {
                 System.out.println("Коробка уже пуста. Убрать из неё предмет не получится.");
@@ -101,21 +89,14 @@ public class Box {
         return null;
     }
 
-
-
- /** конструктор: */
     public Box(int length, int width, int height, String color, String item){
         this.length = length;
         this.width = width;
         this.height = height;
         this.color = color;
         this.item = item;
-
     }
 
-
-
-    /** методы - инфо о коробке: */
     public void info(){
         System.out.println("\nСвойства коробки: высота = " + length + ", " + "ширина = " + width + ", " + "глубина = " + height + ", " + "цвет: " + color);
         if (isOpen()){
