@@ -27,7 +27,7 @@ public class Application {
 
         System.out.println();
         System.out.println("************************************************************");
-        System.out.println("Вторая часть ДЗ. Задание про коробку:");
+        System.out.println("Вторая часть ДЗ:");
 
         Box box = new Box(5, 5, 6, "green", "cat");
         box.info();
