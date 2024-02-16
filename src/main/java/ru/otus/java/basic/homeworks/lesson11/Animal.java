@@ -7,18 +7,14 @@ public abstract class Animal {
     protected int swimmingSpeed;
     protected int endurance;
     protected boolean swimAbility;
-    protected int expensesEnduranceOfRun; // затраты выносливости на бег
-    protected int expensesEnduranceOfSwim; // затраты выносливости на плавание
+    protected int expensesEnduranceOfRun;
+    protected int expensesEnduranceOfSwim;
     protected float time;
-    protected int requiredEnduranceOfRun;  // требуемые затраты выносливости
+    protected int requiredEnduranceOfRun;
     protected int requiredEnduranceOfSwim;
 
 
-    public int getExpensesEnduranceOfRun() {
-        return expensesEnduranceOfRun;
-    }
 
-    /** конструкторы для разных животных*/
     public Animal(String name, int runningSpeed, int swimmingSpeed, int endurance) {
         this.name = name;
         this.runningSpeed = runningSpeed;
@@ -32,6 +28,7 @@ public abstract class Animal {
         this.name = name;
         this.runningSpeed = runningSpeed;
         this.endurance = endurance;
+        this.swimAbility = false;
         this.expensesEnduranceOfRun = 1;
     }
 
