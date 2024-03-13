@@ -29,18 +29,12 @@ public class PersonDataBase {
 
 
     public boolean isManager(Person person){
-        if (person.isTopPosition()){
-            return true;
-        }
-        return false;
+        return person.isTopPosition();
     }
 
 
     public boolean isEmployee(Long id){
-        if (!personsMap.get(id).getPositionName().isTop()){
-            return true;
-        }
-        return false;
+        return !personsMap.get(id).getPositionName().isTop();
     }
 
 
