@@ -4,7 +4,7 @@ public class Person {
 
     private String name;
     private Long id;
-    Position positionName;
+    private Position positionName;
 
     /** геттеры и сеттеры */
     public String getName() {
@@ -52,10 +52,7 @@ public class Person {
 
 
     public boolean isTopPosition(){
-        if (positionName.isTop()){
-            return true;
-        }
-        return false;
+        return positionName.isTop();
     }
 
 
