@@ -1,18 +1,24 @@
 package ru.otus.java.basic.homeworks;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 
-        /** Реализуйте приложение, позволяющее работать с текстовыми файлами:
-        1) При старте приложения, в консоль выводится список текстовых файлов из корневого каталоге проекта
-        2) Далее программа запрашивает имя файла, с которым хочет работать пользователь
-        3) Содержимое файла выводится в консоль
-        4) Затем любую введенную пользователем строку необходимо записывать в указанный файл */
+        ClassFile file = new ClassFile();
 
 
+        file.getTxt();
+        System.out.println();
 
 
+        file.findFile();
+        System.out.println();
+
+        file.write();
+
+        file.printFile();
 
 
     }
